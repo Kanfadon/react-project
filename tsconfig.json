@@ -2,10 +2,13 @@
     "compilerOptions": {
         "outDir": "./dist",
         "target": "es5",
-        "module": "es6",
+        "module": "esnext",
         "jsx": "react",
+        "lib": ["dom", "esnext"],
+        "esModuleInterop": true,
         "noImplicitAny": true,
         "allowSyntheticDefaultImports": true,
         "moduleResolution": "nodenext"
-    }
+    },
+    "exclude": ["node_modules"]
 }
