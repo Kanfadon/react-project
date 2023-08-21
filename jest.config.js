@@ -12,7 +12,7 @@ module.exports = {
         'jsx',
         'json'
     ],
-    setupFilesAfterEnv: ['@testing-library/jest-dom'],
+    setupFilesAfterEnv: ['@testing-library/jest-dom', './src/__tests__/setupTests.ts'],
     verbose: true,
     bail: 0
 };

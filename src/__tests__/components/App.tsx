@@ -11,9 +11,16 @@ describe('Отрисовка главного экрана', () => {
         render(<Provider store={store}><App /></Provider>);
         expect(screen.getByText('click 0')).not.toBeUndefined();
     });
+
     test('Счетчик должен увеличиваться на 1 при нажатии', async () => {
         render(<Provider store={store}><App /></Provider>);
         fireEvent.click(screen.getByText('click 0'));
         expect(screen.getByText('click 1')).not.toBeUndefined();
+    });
+
+    test('Метод должен вернуть данные', async () => {
+        render(<Provider store={store}><App /></Provider>);
+        screen.debug();
+        expect(await screen.findByText(/name: Test user/i)).not.toBeUndefined();
     });
 });
